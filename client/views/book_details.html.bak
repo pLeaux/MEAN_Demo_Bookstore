@@ -1,0 +1,32 @@
+<div class="panel panel-default" ng-init="getBook_details()"> 
+    <!-- p> TOLE JE MOCKUP ZA BOOK_DETAILS.HTML </p -->
+    <div class="panel panel-header"> 
+        <h3>{{book_responseBody.title}} <h3>
+    </div>
+    <div class="panel panel-body"> 
+        <div class = "col-lg-4"> 
+            <ul class="list-group">
+                <li class="list-group-item">{{book_responseBody.description}}</li>
+                <li class="list-group-item"> <img class="img-responsive thumbnail" src="{{book_responseBody.image_url}}"> </li> 
+            </ul>
+        </div>
+        <div class = "col-lg-8"> 
+            <div class="row"> 
+                <ul class="list-group">
+                    <li class="list-group-item">Genre: {{book_responseBody.genre}}</li>
+                    <li class="list-group-item">Author: {{book_responseBody.author}}</li> 
+                    <li class="list-group-item">Publisher: {{book_responseBody.publisher}}</li>  
+                    <li class="list-group-item">Pages: {{book_responseBody.pages}}</li>                 
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+ 
+<div align="right"> 
+    <a href="#/books/edit/{{book_responseBody._id}}"> Edit book </a>  
+    |  <a href="#/books/delete/{{book_responseBody._id}}"> Delete book </a>
+    <p>Debug, url: #/books/edit/{{book_responseBody._id}} </p> 
+</div>
+ 

@@ -1,0 +1,52 @@
+<html ng-app="myApp">
+<head>
+	<title>BookStore</title>
+	<!-- op. LeoP: butasti Bootsrap 4 več nima Panel class-a !?! ... ampak "Card", zato sem z mreže potegnil stari bootstrap 	
+	<link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
+	-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<script> console.log("Debug LeoP: ./client/index.html started !") </script> 
+
+	<nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">           
+					<a class="navbar-brand" href="#">Bookstore</a>
+        </div>
+        <div id="navbar" class="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#/books/add">Add Book</a></li>
+          </ul>
+        </div> 
+      </div>
+    </nav>
+
+    <div class="container">
+    	<div class="row">
+    		<div class="col-lg-12">
+    			<div ng-view>TEST AAAAAAAAAAAAAA TEST TEST TEST</div>
+    		</div>
+    	</div>
+     </div>
+
+		</div><!-- /.container -->
+	 
+	<script src="/bower_components/jquery/dist/jquery.js"></script>
+
+	<!-- op. LeoP: novejši Angular (>1.6) popači url z hash-om (#, fragment identifier) : za book_detail.html sproži "http://localhost:3000/#!/#%2Fbooks%2Fdetails%2F5ac54a8171590435464c6c45" -->
+	<!-- zato sem z mreže potegnil stari angular --> 
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-route.js"></script>
+ 
+
+	<!-- op. LeoP: butasti Bootsrap 4 več nima Panel class-a !?! ... ampak "Card", zato sem z mreže potegnil stari bootstrap  
+	<script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+	-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="/app.js"></script>
+	<script src="/controllers/books.js"></script>
+	<script src="/controllers/genres.js"></script>
+</body>
+</html>

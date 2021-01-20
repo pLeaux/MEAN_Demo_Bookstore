@@ -1,0 +1,49 @@
+<div class="panel panel-default" ng-init="getBook_details()">
+        <div class="panel panel-heading">
+            <h4>Change book data</h4>
+        </div>
+        <div class="panel panel-body">
+            <div class="row col-lg-12">
+                <!-- glej books.js, "$scope.editBook = function(){}" -->
+                <form ng-submit="editBook()" method="put"> 
+                    <div class="form-group">
+                        <label>Title</label>
+                        <input type="text" class="form-control" ng-model="book_responseBody.title">
+                    </div>
+                    <div class="form-group">
+                        <label>Author</label>
+                        <input type="text" class="form-control"  ng-model="book_responseBody.author">
+    
+                    </div>
+                    <div class="form-group">
+                        <label>Genre:</label>
+                        <input type="text" class="form-control" ng-model="book_responseBody.genre">
+                    </div>
+                    <div class="form-group">
+                        <label>Description:</label>
+                        <input type="text" class="form-control" ng-model="book_responseBody.description">
+                    </div>
+                    <div class="form-group">
+                        <label>Publisher:</label>
+                        <input type="text" class="form-control" ng-model="book_responseBody.publisher">
+                    </div>                   
+                    <div class="form-group">
+                        <label>Pages:</label>
+                        <input type="text" class="form-control" ng-model="book_responseBody.pages">
+                    </div>   
+                    <div class="form-group">
+                        <label>Image URL:</label>
+                        <input type="text" class="form-control" ng-model="book_responseBody.image_url">
+                    </div>   
+                    <div class="form-group">
+                            <label>Buy URL:</label>
+                            <input type="text" class="form-control" ng-model="book_responseBody.buy_url">
+                    </div>
+                    <button class="btn btn-primary" type="submit">Pošlji</button>
+                </form>
+            </div> 
+            
+        </div>
+             
+    
+    <div>
